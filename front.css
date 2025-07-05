@@ -1,0 +1,198 @@
+/* Base */
+body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #181818;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-icon {
+    color: #a855f7;
+    font-size: 20px;
+  }
+  
+  .brand-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .menu a {
+    margin: 0 12px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .menu a:hover {
+    color: white;
+  }
+  
+  .account i {
+    font-size: 18px;
+    color: #aaa;
+  }
+  
+  /* Intro */
+  .intro {
+    text-align: center;
+    padding: 3rem 1rem 1.5rem;
+  }
+  
+  .intro-icon {
+    font-size: 2rem;
+    color: #a855f7;
+    margin-bottom: 0.5rem;
+  }
+  
+  .intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .intro-text {
+    font-size: 0.95rem;
+    color: #aaa;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Search */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .search-section input {
+    width: 50%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #222;
+    color: #fff;
+  }
+  
+  #filterBtn {
+    background: #222;
+    color: #aaa;
+    padding: 10px 16px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Movies */
+  .section-title {
+    padding: 1rem 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 1.5rem 2rem 3rem;
+  }
+  
+  .movie-box {
+    background: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  
+  .movie-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .movie-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .info {
+    padding: 0.75rem 1rem;
+  }
+  
+  .info h3 {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+  }
+  
+  .info p {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  
+  .meta {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #a855f7;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tag {
+    background: #2a2a2a;
+    padding: 3px 8px;
+    border-radius: 16px;
+    font-size: 0.7rem;
+    color: #a855f7;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #181818;
+    padding: 1rem 2rem;
+    font-size: 0.85rem;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-links a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: #888;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+
+  /* Force footer to bottom even with little content */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main, .movies-area {
+    flex: 1;
+  }
