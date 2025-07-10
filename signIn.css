@@ -18,6 +18,7 @@ body.dark-mode {
     --input-bg: #2c2c2c;
     --button-bg: #a259ff;
     --button-color: #ffffff;
+    
 }
 
 *{
@@ -243,5 +244,10 @@ body{
 }
 
 .dark-mode h1 {
+    color: #ffffff;
+}
+
+/* Improve input text visibility in dark mode */
+.dark-mode .container input {
     color: #ffffff;
 }
