@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --bg-color: #c9d6ff;
+    --bg-gradient: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    --container-bg: #fff;
+    --text-color: #333;
+    --input-bg: #eee;
+    --button-bg: #2da0a8;
+    --button-color: #fff;
+}
+
+body.dark-mode {
+    --bg-color: #0d0d0f;
+    --bg-gradient: linear-gradient(to right, #121212, #0d0d0f);
+    --container-bg: #1a1a1a;
+    --text-color: #f1f1f1;
+    --input-bg: #2c2c2c;
+    --button-bg: #a259ff;
+    --button-color: #ffffff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,9 +28,8 @@
 }
 
 body{
-    background-color: #000;
-    background: linear-gradient(to right, #111, #000);
-    color: #fff;
+    background-color: var(--bg-color);
+    background: var(--bg-gradient);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +38,7 @@ body{
 }
 
 .container{
-    background-color: #111;
+    background-color: var(--container-bg);
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -34,24 +53,22 @@ body{
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
-    color: #e88;
 }
 
 .container span{
     font-size: 12px;
-    color: #e88;
 }
 
 .container a{
-    color: #ff4d4d;
+    color: var(--text-color);
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
 .container button{
-    background-color: #ff1a1a;
-    color: #fff;
+    background-color: var(--button-bg);
+    color: var(--button-color);
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
@@ -63,14 +80,13 @@ body{
     cursor: pointer;
 }
 
-.container button.hidden {
+.container button.hidden{
     background-color: transparent;
-    border: 1px solid #ff4d4d;
-    color: #ff4d4d;
+    border-color: #fff;
 }
 
 .container form{
-    background-color: #111;
+    background-color: var(--container-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,9 +96,8 @@ body{
 }
 
 .container input{
-    background-color: #222;
-    color: #fff;
-    border: 1px solid #ff1a1a;
+    background-color: var(--input-bg);
+    border: none;
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
@@ -102,7 +117,6 @@ body{
     left: 0;
     width: 50%;
     z-index: 2;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
 .container.active .sign-in{
@@ -114,7 +128,6 @@ body{
     width: 50%;
     opacity: 0;
     z-index: 1;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
 .container.active .sign-up{
@@ -140,7 +153,7 @@ body{
 }
 
 .social-icons a{
-    border: 1px solid #ff4d4d;
+    border: 1px solid #ccc;
     border-radius: 20%;
     display: inline-flex;
     justify-content: center;
@@ -148,7 +161,6 @@ body{
     margin: 0 3px;
     width: 40px;
     height: 40px;
-    color: #ff4d4d;
 }
 
 .toggle-container{
@@ -169,9 +181,10 @@ body{
 }
 
 .toggle{
+    background-color: var(--button-bg);
     height: 100%;
-    background: linear-gradient(to right, #660000, #990000);
-    color: #fff;
+    background: linear-gradient(to right, #5c6bc0, var(--button-bg));
+    color: var(--button-color);
     position: relative;
     left: -100%;
     height: 100%;
@@ -197,7 +210,6 @@ body{
     top: 0;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
-    color: #fff;
 }
 
 .toggle-left{
@@ -217,38 +229,19 @@ body{
     transform: translateX(200%);
 }
 
-.container input:focus {
-    border-color: #ff4d4d;
-    box-shadow: 0 0 5px #ff4d4d;
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    border: 1px solid var(--button-bg);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
 }
 
-
-/* Hover transition effects for interactivity */
-.container button,
-.container button.hidden,
-.container a,
-.social-icons a {
-    transition: all 0.3s ease-in-out;
-}
-
-.container button:hover {
-    background-color: #e60000;
-    transform: scale(1.05);
-}
-
-.container button.hidden:hover {
-    background-color: #ff4d4d;
-    color: #000;
-    transform: scale(1.05);
-}
-
-.container a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.social-icons a:hover {
-    background-color: #ff4d4d;
-    color: #000;
-    transform: scale(1.1);
+.dark-mode h1 {
+    color: #ffffff;
 }

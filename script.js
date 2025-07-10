@@ -9,3 +9,13 @@ registerBtn.addEventListener("click", () => {
 loginBtn.addEventListener("click", () => {
   container.classList.remove("active");
 });
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+}
+function setMode(mode) {
+  if (mode === 'dark') {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
